@@ -1,0 +1,1 @@
+export const SET_ALL_DATA = "COUNTRIES/SET_ALL_DATA";

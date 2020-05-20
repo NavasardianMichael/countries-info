@@ -1,0 +1,17 @@
+.country-item p {
+	margin: 15px 0;
+}
+
+.country-item img {
+	width: 100%;
+	border: 1px solid lightgrey;
+}
+
+.show-more-btn,
+.more-info {
+	display: none;
+}
+
+.show-more-btn:checked + .more-info {
+	display: block;
+}
