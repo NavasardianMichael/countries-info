@@ -1,10 +1,26 @@
+.country-item {
+	position: relative;
+}
+
 .country-item p {
 	margin: 15px 0;
+}
+
+.country-item p i {
+	color: grey;
+	font-size: 20px;
 }
 
 .country-item img {
 	width: 100%;
 	border: 1px solid lightgrey;
+}
+
+.country-item .btn-close {
+	position: absolute;
+	z-index: 1;
+	right: 15px;
+	top: 15px;
 }
 
 .show-more-btn,

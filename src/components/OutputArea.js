@@ -1,20 +1,20 @@
 import React from 'react';
-import {useStore, useDispatch} from 'react-redux';
+import {useStore} from 'react-redux';
 import {connect} from 'react-redux';
 import CountryItem from './CountryItem';
-import {fecthAllData} from '../redux/actions';
+import {showAllCountries} from '../redux/actions';
 
 function OutputArea(props) {
 	const store = useStore();
 
 	function renderAllData() {
-		store.dispatch(fecthAllData());
+		store.dispatch(showAllCountries());
 	};
 
-	const allCountriesData = props.allData.map(item => <CountryItem country={item} key={item.latlng} />)
+	const allCountriesData = props.shownCountries.map(item => <CountryItem country={item} key={item.latlng} />)
 
 	return (
-		<div id="output">
+		<div id="outputArea">
 			<button type="button" className="btn btn-success px-4" onClick={renderAllData}>Load All Data</button>
 			<hr />
 			<div className="row">
@@ -26,7 +26,7 @@ function OutputArea(props) {
 
 const mapStateToProps = state => {
 	return {
-		allData: state.data.allData
+		shownCountries: state.data.shownCountries
 	}
 }
 
